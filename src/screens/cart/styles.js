@@ -4,8 +4,29 @@ import { THEME } from "../../constants/theme";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: THEME.colors.bachground,
-        alignItems: "center",
-        justifyContent: "center",
+    },
+    listContainer: {
+       flex: 1,
+       backgroundColor: THEME.colors.white
+    },
+    footer: {
+        backgroundColor: THEME.colors.white,
+        borderTopColor: THEME.colors.black,
+        borderTopWidth: 1,
+        paddingVertical: 10,
+        marginBottom: 10,
+        marginHorizontal: 10,
+    },
+    buttonConfirm:{
+       
+    },
+    totalContainer: {
+
+    },
+    totalText:{
+
+    },
+    totalPrice: {
+
     }
 });
