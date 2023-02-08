@@ -29,7 +29,7 @@ const Tabs = () => {
                   title:"Shop",
                   tabBarIcon: ({ focused }) => (
                     <Fontisto 
-                    name={focused ? "shopping-store" : "shopping-store"} 
+                    name="shopping-store"
                     size={24} 
                     color={THEME.colors.primary} 
                     />
