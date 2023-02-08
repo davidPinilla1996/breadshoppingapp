@@ -1,7 +1,8 @@
-import React from 'react'
-import { View, Text } from "./styles"
+import { View, Text } from 'react-native'
 
-const Cart = () => {
+import { styles } from './styles'
+
+const Cart = ({ navigation }) => {
   return (
     <View style={styles.container}>
         <Text>Cart</Text>

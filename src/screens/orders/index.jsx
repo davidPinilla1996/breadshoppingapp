@@ -1,7 +1,8 @@
-import React from 'react'
-import { View, Text } from "./styles"
+import { View, Text } from 'react-native'
 
-const Orders = () => {
+import { styles } from './styles'
+
+const Orders = ({ navigation }) => {
   return (
     <View style={styles.container}>
         <Text>Orders</Text>
