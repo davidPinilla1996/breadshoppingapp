@@ -17,4 +17,5 @@ export const CART = [
       price: 800,
       quantity: 3,
    },
+   
   ];

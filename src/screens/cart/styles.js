@@ -15,18 +15,36 @@ export const styles = StyleSheet.create({
         borderTopWidth: 1,
         paddingVertical: 10,
         marginBottom: 10,
-        marginHorizontal: 10,
+        paddingHorizontal: 10,
     },
     buttonConfirm:{
-       
+      backgroundColor: THEME.colors.primary,
+      borderRadius: 10,
+      paddingHorizontal: 20,
+      paddingVertical: 15,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center"
+    },
+    buttonConfirmText: {
+      color: THEME.colors.white,
+      fontSize: 15,
+      fontFamily: 'Aboreto-Regular'
     },
     totalContainer: {
-
+      flex: 0.4,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between"
     },
     totalText:{
-
+        color: THEME.colors.white,
+        fontSize: 15,
+        fontFamily: 'Aboreto-Regular'
     },
     totalPrice: {
-
+        color: THEME.colors.white,
+        fontSize: 15,
+        fontFamily: 'Aboreto-Regular'
     }
 });
