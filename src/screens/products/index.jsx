@@ -5,7 +5,7 @@ import { ProductItem } from '../../components';
 import { PRODUCTS } from '../../constants/data/index'
 
 const Products = ( { navigation, route }) => {
-  const {categoryId, title} = route.params;
+  const {categoryId} = route.params;
 
   const filteredProducts = PRODUCTS.filter((product) => product.categoryId === categoryId);
 

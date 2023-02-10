@@ -1,5 +1,7 @@
 export const THEME = {
     colors: {
+      colorText: "#fff",
+      bordeImg: "#fff",
       primary: '#FBB13C',
       secundary: '#57B8FF',
       bachground: '#54C6EB',
