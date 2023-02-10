@@ -10,6 +10,8 @@ const App = () => {
   const [loaded] = useFonts({
      //le indicamos donde esta la fuente y que fuente queremos cargar
     "Aboreto-Regular": require("../assets/fonts/Aboreto-Regular.ttf"),
+    "CinzelDecorative-Bold": require("../assets/fonts/CinzelDecorative-Bold.ttf"),
+    "KaushanScript-Regular": require("../assets/fonts/KaushanScript-Regular.ttf")
   });
 
 if (!loaded) {
