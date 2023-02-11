@@ -6,33 +6,47 @@ import { THEME } from "../../constants/theme";
         container: {
           flex: 1,
           padding: 10,
-          marginHorizontal: 20,
-          marginVertical: 10,
-          borderRadius: 10,
-          height: 130,
-          backgroundColor: THEME.colors.primary
+          marginTop: 30, 
+          marginHorizontal: 25,
+          borderTopLeftRadius: 30,
+          borderBottomRightRadius: 30,
+          height: 190,
+          backgroundColor: THEME.colors.secundary,
+          borderWidth: 3,
+          borderColor: THEME.colors.primary
         },
         contentContainer: {
           flex: 1,
           justifyContent: 'space-around',
+          alignItems: 'center',
         },
         title: {
-          fontFamily: "Aboreto-Regular",
-          fontSize: 16,
+          fontFamily: "CinzelDecorative-Bold",
+          fontSize: 18,
+          color: THEME.colors.white,
+          margin: 10
+        },
+        textDescription: {
+          fontFamily: "KaushanScript-Regular",
+          fontSize: 19,
           color: THEME.colors.white
         },
         detailsContainer: {
           flexDirection: 'row',
-          justifyContent: "space-between"
+          justifyContent: "center"
         },
         price: {
-          fontFamily: "Aboreto-Regular",
+          fontFamily: "CinzelDecorative-Bold",
           fontSize: 16,
-          color: THEME.colors.white
+          marginTop: 10,
+          marginRight: 25,
+          color: THEME.colors.white,
         },
         weight: {
-          fontFamily: "Aboreto-Regular",
+          fontFamily: "CinzelDecorative-Bold",
           fontSize: 16,
+          marginTop: 10,
+          marginLeft: 25,
           color: THEME.colors.white
         }
 });

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, FlatList } from 'react-native'
+import { SafeAreaView, FlatList, ImageBackground } from 'react-native'
 import { styles } from '../../styles';
 import { ProductItem } from '../../components';
 import { PRODUCTS } from '../../constants/data/index'
@@ -26,6 +26,7 @@ const Products = ( { navigation, route }) => {
            keyExtractor={keyExtractor}
            style={styles.contentList}
         />
+        
     </SafeAreaView>
   )
 }

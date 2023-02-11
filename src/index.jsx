@@ -1,5 +1,5 @@
 import { useFonts } from "expo-font";
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, ImageBackground } from 'react-native';
 import { styles } from './styles';
 //importamos nuestro AppAppNavigator que contiene todo el tema de la navegacion
 import AppNavigator from "./navigation";

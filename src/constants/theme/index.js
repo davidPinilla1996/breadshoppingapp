@@ -3,7 +3,7 @@ export const THEME = {
       colorText: "#fff",
       bordeImg: "#fff",
       primary: '#FBB13C',
-      secundary: '#57B8FF',
+      secundary: '#7A542E',
       bachground: '#54C6EB',
       text: '#AD2E24',
       title: "#9FA4A9",
