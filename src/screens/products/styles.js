@@ -5,8 +5,7 @@ import { THEME } from "../../constants/theme";
  export const styles = StyleSheet.create({
         container: {
           flex: 1,
-          backgroundColor: THEME.colors.bachground,
-          
+          backgroundColor: THEME.colors.bachground
         },
         title: {
           fontSize: 20,

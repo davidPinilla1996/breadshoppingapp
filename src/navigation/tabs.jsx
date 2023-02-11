@@ -10,53 +10,53 @@ import { FontAwesome } from '@expo/vector-icons';
 const BottomTab = createBottomTabNavigator();
 
 const Tabs = () => {
-    return (
-           <BottomTab.Navigator 
-           initialRouteName="ShopTab"
-           screenOptions={{
-            headerShown: false,
-            tabBarLabelStyle: {
-               fontFamily: "Aboreto-Regular",
-               fontSize: 12
-            },
-            tabBarActiveTintColor: THEME.colors.primary,
-            tabBarInactiveTintColor: THEME.colors.text
-           }}>
-                <BottomTab.Screen 
-                name="ShopTab" 
-                component={ShopNavigator} 
-                options={{
-                  title:"Shop",
-                  tabBarIcon: ({ focused }) => (
-                    <Fontisto 
-                    name="shopping-store"
-                    size={24} 
-                    color={THEME.colors.primary} 
-                    />
-                  ),                  
-                }}
+  return (  
+  <BottomTab.Navigator 
+             initialRouteName="ShopTab"
+             screenOptions={{
+                 headerShown: false,
+                 tabBarLabelStyle: {
+                    fontFamily: "KaushanScript-Regular",
+                    fontSize: 15,
+                 },
+                 tabBarActiveTintColor: THEME.colors.primary,
+                 tabBarInactiveTintColor: THEME.colors.secundary,
+                 }}>
+             <BottomTab.Screen 
+                  name="ShopTab" 
+                  component={ShopNavigator} 
+                  options={{
+                      title:"Shop",
+                  tabBarIcon: () => (
+                  <Fontisto 
+                      name={"shopping-store"} 
+                      size={22} 
+                      color={THEME.colors.secundary} 
+                  />
+                   ),                  
+                 }}
                 />
-                <BottomTab.Screen 
-                name="OrdersTab" 
-                component={OrdersNavigator} 
-                options={{
-                  title:"Orders",
-                  tabBarIcon: ({ focused }) => (
-                    <Ionicons name="file-tray-full" size={24} color={THEME.colors.primary} />
-                  )   
-                }}
-                />
-                <BottomTab.Screen 
-                name="CartTab" 
-                component={CartNavigator} 
-                options={{
-                  title:"Cart",
-                  tabBarIcon: ({ focused }) => (
-                    <FontAwesome name="cart-arrow-down" size={24} color={THEME.colors.primary} />
-                  )   
-                }}
-                />
-            </BottomTab.Navigator>
+             <BottomTab.Screen 
+                  name="OrdersTab" 
+                  component={OrdersNavigator} 
+                  options={{
+                     title:"Orders",
+                     tabBarIcon: () => (
+                    <Ionicons name="file-tray-full" size={24} color={THEME.colors.secundary} />
+                     )   
+                  }}
+              />
+             <BottomTab.Screen 
+                  name="CartTab" 
+                  component={CartNavigator} 
+                  options={{
+                     title:"Cart",
+                  tabBarIcon: () => (
+                     <FontAwesome name="cart-arrow-down" size={24} color={THEME.colors.secundary} />
+                   )   
+                 }}
+             />
+       </BottomTab.Navigator>
   );
 };
 
