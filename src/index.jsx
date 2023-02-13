@@ -1,9 +1,11 @@
 import { useFonts } from "expo-font";
-import { View, ActivityIndicator, ImageBackground } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 import { styles } from './styles';
 //importamos nuestro AppAppNavigator que contiene todo el tema de la navegacion
 import AppNavigator from "./navigation";
 import { THEME } from "../src/constants/theme";
+import { Provider } from "react-redux";
+ import  store  from "./store"; 
 
 const App = () => {
   //usamos este componente para sabar si a cargado o no la fuente
@@ -22,7 +24,11 @@ if (!loaded) {
    )
 }
 //y el AppNavigator es lo que yo voy a mostrar en mi App
-  return <AppNavigator />;
-}
+  return (
+     <Provider store={store}>
+        <AppNavigator />
+     </Provider>
+  );
+};
 
 export default App;
