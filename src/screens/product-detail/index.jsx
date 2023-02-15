@@ -1,12 +1,11 @@
 import React from 'react'
 import { ImageBackground, Text, View } from 'react-native'
 import { styles } from '../../styles';
-import { PRODUCTS } from "../../constants/data";
+import { useSelector } from "react-redux";
 
-const ProductDetail = ({ navigation, route }) => {
-  const { productId, title } = route.params;
+const ProductDetail = ({ navigation }) => {
+  const product = useSelector((state) => state.products.selected);
 
-  const product = PRODUCTS.find((product) => product.id === productId);
   return (
     <View style={styles.container}>
       <ImageBackground source={(require("../../img/panArtesanal.jpg"))} style={styles.image}>

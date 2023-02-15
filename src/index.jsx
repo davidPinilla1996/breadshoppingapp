@@ -1,10 +1,10 @@
 import { useFonts } from "expo-font";
 import { View, ActivityIndicator } from 'react-native';
+import { Provider } from "react-redux";
 import { styles } from './styles';
 //importamos nuestro AppAppNavigator que contiene todo el tema de la navegacion
 import AppNavigator from "./navigation";
 import { THEME } from "../src/constants/theme";
-import { Provider } from "react-redux";
  import  store  from "./store"; 
 
 const App = () => {

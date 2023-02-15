@@ -2,15 +2,17 @@ import React from 'react'
 import { FlatList, ImageBackground, SafeAreaView, Text, View, Image } from 'react-native'
 import { styles } from './styles';
 import { CategoryItem } from "../../components";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux"; 
+import { selectCategory } from "../../store/actions";
 
 
 const  Categories = ( {navigation} ) => {
+  const dispatch = useDispatch(); 
   const categories = useSelector((state) => state.category.categories); 
   const onSelected = (item) => {
-    navigation.navigate("Products",{
-      categoryId: item.id,
-      title: item.title
+    dispatch(selectCategory(item.id));
+    navigation.navigate("Products",{ 
+      title: item.title,
     });
   }; 
   const renderItem = ({ item }) => <CategoryItem item={item} onSelected={onSelected} />;
