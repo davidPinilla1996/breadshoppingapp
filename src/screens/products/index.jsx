@@ -3,16 +3,13 @@ import { SafeAreaView, FlatList } from 'react-native'
 import { useSelector, useDispatch} from "react-redux";
 import { styles } from '../../styles';
 import { selectProduct, filterProducts } from "../../store/actions";
-import { PRODUCTS } from "../../constants/data/index";
 import { ProductItem } from '../../components';
 
 
 const Products = ( { navigation }) => {
   const dispatch = useDispatch();
   const category = useSelector((state) => state.category.selected);
-
-
-  const filteredProducts = PRODUCTS.filter((product) => product.categoryId === category.id);
+  const filteredProducts = useSelector((state) => state.products.filteredProducts);
   
 
  const onSelected = (item) => {
