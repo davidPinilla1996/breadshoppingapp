@@ -46,5 +46,15 @@ export const styles = StyleSheet.create({
         color: THEME.colors.white,
         fontSize: 15,
         fontFamily: 'Aboreto-Regular'
+    },
+    header: {
+      marginVertical: 20,
+      marginHorizontal: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    headerTitle: {
+      fontFamily: "Aboreto-Regular",
+      fontSize: 18
     }
 });

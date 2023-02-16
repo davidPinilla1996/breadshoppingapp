@@ -5,11 +5,13 @@ import ShopNavigator from "./shop";
 import { THEME } from "../constants/theme";
 import { Fontisto } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { useSelector } from "react-redux";
 import { FontAwesome } from '@expo/vector-icons';  
 
 const BottomTab = createBottomTabNavigator();
 
 const Tabs = () => {
+  const cart = useSelector((state) => state.cart.items);
   return (  
   <BottomTab.Navigator 
              initialRouteName="ShopTab"
@@ -53,7 +55,14 @@ const Tabs = () => {
                      title:"Cart",
                   tabBarIcon: () => (
                      <FontAwesome name="cart-arrow-down" size={24} color={THEME.colors.secundary} />
-                   )   
+                   ),
+                   tabBarBadge: cart.length,
+                   tabBarBadgeStyle: {
+                    backgroundColor: THEME.colors.primary,
+                    color: THEME.colors.colorText,
+                    fontFamily: "Aboreto-Regular",
+                    fontSize: 11,
+                   }
                  }}
              />
        </BottomTab.Navigator>
