@@ -1,17 +1,20 @@
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import { CartItem } from '../../components';
-import { useSelector } from "react-redux";
+import { remoreFromCart } from "../../store/actions/index";
+import { useSelector, useDispatch } from "react-redux";
 
 const Cart = ({ navigation }) => {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.items);
 
 
   const total = useSelector((state) => state.cart.total);
-  const onDelete = (id) => {};
+  const onDelete = (id) => {
+    dispatch(remoreFromCart(id));
+  };
   const renderItem = ({ item }) => <CartItem item={item} onDelete={onDelete} />;
   const keyExtractor = (item) => item.id.toString();
-  console.warn(cart.length);
   const Header = () => 
      cart.length <= 0 && (
       <View style={styles.header}>
