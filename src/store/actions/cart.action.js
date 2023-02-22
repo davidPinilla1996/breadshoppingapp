@@ -1,4 +1,5 @@
 import { cartTypes } from "../types";
+import { REALTIME_DATABASE_URL } from "../../constants/firebase";
 
 
 const { ADD_TO_CART, REMOVE_FROM_CART, CONFIRM_ORDER } = cartTypes;
@@ -15,10 +16,10 @@ export const remoreFromCart = (id) => ({
     id,
 });
 
-export  const confirmOrder = (items, total) => {
+export const confirmOrder = (items, total) => {
     return async (dispatch) => {
         try {
-            const response = await fetch("${REALTIME_DATABASE_URL}/orders.json", {
+            const response = await fetch(`${REALTIME_DATABASE_URL}/orders.json`, {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -30,8 +31,6 @@ export  const confirmOrder = (items, total) => {
                 }),
             });
          const result = await response.json();
-
-         console.warn("result", result);
          
          dispatch({
             type: CONFIRM_ORDER,

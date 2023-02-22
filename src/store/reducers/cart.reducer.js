@@ -1,7 +1,7 @@
 import { sumTotal } from "../../utils/functions";
 import { cartTypes } from "../types";
 
-const { ADD_TO_CART, REMOVE_FROM_CART, CONFIRM_ORDER } = cartTypes;
+const { ADD_TO_CART, CONFIRM_ORDER, REMOVE_FROM_CART } = cartTypes;
 
 
 const initialState = {
@@ -19,7 +19,7 @@ const cartReducer = (state = initialState, action) => {
                     return item;
                 });
             }else {
-               const item = { ...action.item, quantity: 1};
+               const item = { ...action.item, quantity: 1 };
                updatedCart = [ ...state.items, item];   
             }
             return {

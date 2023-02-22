@@ -7,8 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 const Cart = ({ navigation }) => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.items);
-
-
   const total = useSelector((state) => state.cart.total);
   const onDelete = (id) => {
     dispatch(remoreFromCart(id));
@@ -32,7 +30,7 @@ const Cart = ({ navigation }) => {
            <Text style={styles.buttonConfirmText}>Confirm</Text>
            <View style={styles.totalContainer}>
                <Text style={styles.totalText}>Total:</Text>
-               <Text style={styles.totalPrice}>{total}</Text>
+               <Text style={styles.totalPrice}>${total}</Text>
            </View>
        </TouchableOpacity>
     </View> 
