@@ -7,7 +7,7 @@ const { GET_ORDERS, DELETE_ORDER } = orderTypes;
 export const getOrders = () => {
     return async (dispatch) => {
         try {
-            const response = await fetch(`${REALTIME_DATABASE_URL}.orders.json`,{
+            const response = await fetch(`${REALTIME_DATABASE_URL}/orders.json`,{
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
