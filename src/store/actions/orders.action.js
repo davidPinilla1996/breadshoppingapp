@@ -37,7 +37,7 @@ export const getOrders = () => {
 export const deleteOrder = (id) =>  {
     return async (dispatch) => {
       try {
-        const response = await fetch(`${REALTIME_DATABASE_URL}.orders.json`,{
+        const response = await fetch(`${REALTIME_DATABASE_URL}/orders/${id}.json`,{
             method: 'DELETE',
             headers: {
                 'Content-Types': 'application/json',
@@ -45,16 +45,12 @@ export const deleteOrder = (id) =>  {
         });
 
         const result = await response.json();
-
         dispatch({ 
             type: DELETE_ORDER,
-            result,
+            id,
         });
       } catch (error) {
-        dispatch({
-           type: DELETE_ORDER,
-           error,
-        });
+        console.log(error);
       }
     }; 
 };

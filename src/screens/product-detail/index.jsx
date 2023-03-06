@@ -16,10 +16,10 @@ const ProductDetail = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ImageBackground source={(require("../../img/panArtesanal.jpg"))} style={styles.image}>
-        <Text style={styles.title}>{product.title}</Text>
-        <Text style={styles.title}>{product.description}</Text>
-        <Text style={styles.title}>{product.weight}</Text>
-        <Text style={styles.title}>{product.price}</Text>
+        <Text style={styles.title}>{product?.title}</Text>
+        <Text style={styles.title}>{product?.description}</Text>
+        <Text style={styles.title}>{product?.weight}</Text>
+        <Text style={styles.title}>{product?.price}</Text>
         <Button 
            title="add to cart"
            onPress={onAddToCart} 

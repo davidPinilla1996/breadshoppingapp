@@ -17,7 +17,7 @@ const ordersReducer = (state = initialState, action) => {
                 return { 
                     ...state,
                     list: state.list.filter(
-                        (order) => order.id === action.id
+                        (order) => order.id !== action.id
                     )
                 };
                 default: 
