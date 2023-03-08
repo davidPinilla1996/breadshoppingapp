@@ -31,7 +31,7 @@ const Auth = ({ navigation }) => {
                autoCorrect={false}
                onChangeText={() => {}}
             />
-            <Button title={messageButton} color={THEME.colors.primary} onPress={() => {}} />
+            <Button title={messageButton} color={THEME.colors.black} onPress={() => {}} />
             <View style={styles.prompt}>
                 <TouchableOpacity style={styles.promptButton} onPress={() => setIsLogin(!isLogin)}>
                     <Text style={styles.promptMessage}>{message}</Text>
