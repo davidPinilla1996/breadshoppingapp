@@ -2,6 +2,9 @@ import { StyleSheet } from "react-native";
 import { THEME } from "../../constants/theme";
 
  export const styles = StyleSheet.create({
+        KeybordContainer: {
+            flex: 1
+        },
         container: {
             flex: 1,
             justifyContent: 'center',
@@ -24,7 +27,7 @@ import { THEME } from "../../constants/theme";
         label: {
           fontSize: 14,
           fontFamily: 'Aboreto-Regular',
-          paddingVertical: 10, 
+          marginVertical: 5
         },
         input: {
             height: 45,
@@ -32,12 +35,15 @@ import { THEME } from "../../constants/theme";
             borderBottomWidth: 1,
             width: "90%",
             fontFamily: 'Aboreto-Regular',
-            paddingVertical: 5
+            marginBottom: 10
+        },
+        buttonContainer: {
+          marginVertical: 10
         },
         prompt: {
            width: "100%",
            alignItems: "center",
-           marginVertical: 10
+           marginVertical: 20 
         },
         promptButton: {
             width: "100%",
