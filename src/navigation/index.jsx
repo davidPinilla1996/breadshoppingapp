@@ -10,7 +10,11 @@ const AppNavigator = () => {
     //esto me va a retornar el NavigationContainer
     const [userId, setUserId] = useState(null);
     return (
-        <NavigationContainer>{userId ? <TabsNavigator /> : <AuthNavigator />}</NavigationContainer>
+        <NavigationContainer>
+            {
+            userId ? <TabsNavigator /> : <AuthNavigator />
+            }
+        </NavigationContainer>
         );
     };
     

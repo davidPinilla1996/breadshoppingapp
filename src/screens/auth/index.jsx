@@ -11,7 +11,7 @@ const Auth = ({ navigation }) => {
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
    const title = isLogin ? 'Login' : 'Register';
-   const message = isLogin ? "Don't have an account?" : 'Already have an account'; 
+   const message = isLogin ? "Don't have an account?" : 'Already have an account?'; 
    const messageButton = isLogin ? 'Login' : 'Register';
 
    const onHandlerSubmit = () => {
@@ -25,9 +25,9 @@ const Auth = ({ navigation }) => {
             <Text style={styles.label}>Email</Text>
             <TextInput 
                style={styles.input}
-               placeholder="enter your email"
+               placeholder="insert your email here"
                placeholderTextColor={THEME.colors.gray}
-               autoCapitalize="none"
+               autoCapitalize='none'
                autoCorrect={false}
                onChangeText={(text) => setEmail(text)}
                value={email}

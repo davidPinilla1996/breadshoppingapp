@@ -7,7 +7,7 @@ export const signUp = (email, password) => {
     return async (dispatch) => {
         try {
             const response = await fetch(URL_AUTH_SIGN_UP, {
-                method: "POST",
+                method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
                 },
