@@ -1,7 +1,7 @@
 import { URL_AUTH_SIGN_UP } from "../../constants/firebase";
-import { authTypes } from "../types";
+import { auhtTypes } from "../types";
 
-const { SIGN_UP, SIGN_IN} = authTypes;
+const { SIGN_UP, SIGN_IN} = auhtTypes;
 
 export const signUp = (email, password) => {
     return async (dispatch) => {

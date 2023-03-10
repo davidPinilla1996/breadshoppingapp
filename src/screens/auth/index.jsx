@@ -16,7 +16,7 @@ const Auth = ({ navigation }) => {
 
    const onHandlerSubmit = () => {
       dispatch(isLogin ? signIn(email, password) : signUp(email, password));
-   };
+   }; 
    return (
     <KeyboardAvoidingView style={styles.KeybordContainer} behavior={ Platform.OS == "android" ? "height" : "padding"} enabled>
       <View style={styles.container}>

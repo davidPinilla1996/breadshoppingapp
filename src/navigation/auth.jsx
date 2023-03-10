@@ -7,9 +7,7 @@ const AuthNavigator = () => {
     return (
        <Stack.Navigator
          initialRouteName="Auth"
-         screenOptions={{
-           headerShown: false,
-         }}>
+         screenOptions={{headerShown: false}}>
           <Stack.Screen name="Auth" component={Auth} />
        </Stack.Navigator>
     );
