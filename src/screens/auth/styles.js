@@ -21,12 +21,12 @@ import { THEME } from "../../constants/theme";
         },
         title: {
             fontSize: 18,
-            fontFamily: 'Aboreto-Regular',
+            fontFamily: 'TiltNeon-Regular',
             textAlign: 'center',
         },
         label: {
           fontSize: 14,
-          fontFamily: 'Aboreto-Regular',
+          fontFamily: 'TiltNeon-Regular',
           marginVertical: 5
         },
         input: {
@@ -34,7 +34,7 @@ import { THEME } from "../../constants/theme";
             borderBottomColor: THEME.colors.primary,
             borderBottomWidth: 1,
             width: "90%",
-            fontFamily: 'Aboreto-Regular',
+            fontFamily: 'TiltNeon-Regular',
             marginBottom: 10
         },
         buttonContainer: {
@@ -57,7 +57,7 @@ import { THEME } from "../../constants/theme";
         },
         promptMessage: {
             fontSize: 14,
-            fontFamily: 'Aboreto-Regular',
+            fontFamily: 'TiltNeon-Regular',
             color: THEME.colors.white 
         },
 });
