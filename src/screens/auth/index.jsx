@@ -44,7 +44,7 @@ const Auth = ({ navigation }) => {
                value={password}
             />
     <View style={styles.buttonContainer}>
-            <Button title={messageButton} color={THEME.colors.primary} onPress={() => onHandlerSubmit} />
+            <Button title={messageButton} color={THEME.colors.primary} onPress={onHandlerSubmit} />
             <View style={styles.prompt}>
                 <TouchableOpacity style={styles.promptButton} onPress={() => setIsLogin(!isLogin)}>
                     <Text style={styles.promptMessage}>{message}</Text>
