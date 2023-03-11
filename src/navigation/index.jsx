@@ -9,13 +9,7 @@ import AuthNavigator from "./auth";
 const AppNavigator = () => {
     //esto me va a retornar el NavigationContainer
     const [userId, setUserId] = useState(null);
-    return (
-        <NavigationContainer>
-            {
-            userId ? <TabsNavigator /> : <AuthNavigator />
-            }
-        </NavigationContainer>
-        );
+    return <NavigationContainer>{userId ? <TabsNavigator /> : <AuthNavigator />}</NavigationContainer>
     };
     
 //exportamos el arbol de navegacion
