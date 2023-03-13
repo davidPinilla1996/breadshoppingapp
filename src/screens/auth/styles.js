@@ -17,7 +17,8 @@ import { THEME } from "../../constants/theme";
             borderColor: THEME.colors.primary,
             borderWidth: 1,
             backgroundColor: THEME.colors.white,
-            borderRadius: 5
+            borderRadius: 5,
+            minHeight: 330
         },
         title: {
             fontSize: 18,
@@ -28,14 +29,6 @@ import { THEME } from "../../constants/theme";
           fontSize: 14,
           fontFamily: 'TiltNeon-Regular',
           marginVertical: 5
-        },
-        input: {
-            height: 45,
-            borderBottomColor: THEME.colors.primary,
-            borderBottomWidth: 1,
-            width: "90%",
-            fontFamily: 'TiltNeon-Regular',
-            marginBottom: 10
         },
         buttonContainer: {
           marginVertical: 10

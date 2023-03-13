@@ -1,9 +1,10 @@
-import { View, TextInput, Button, TouchableOpacity, Text, KeyboardAvoidingView, Platform } from "react-native";
+import { View, Button, TouchableOpacity, Text, KeyboardAvoidingView, Platform } from "react-native";
 import { THEME } from "../../constants/theme/index";
 import { styles } from "./styles";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signIn, signUp } from "../../store/actions";
+import { Input } from "../../components";
 
 const Auth = ({ navigation }) => {
    const dispatch = useDispatch();
@@ -22,19 +23,17 @@ const Auth = ({ navigation }) => {
       <View style={styles.container}>
         <View style={styles.content}>
             <Text style={styles.title}>{title}</Text>
-            <Text style={styles.label}>Email</Text>
-            <TextInput 
-               style={styles.input}
+            <Input 
                placeholder="insert your email here"
                placeholderTextColor={THEME.colors.gray}
                autoCapitalize='none'
                autoCorrect={false}
                onChangeText={(text) => setEmail(text)}
                value={email}
+               label="Email"
+               labelStyle={styles.label}
             />
-            <Text style={styles.label}>Password</Text>
-            <TextInput 
-               style={styles.input}
+            <Input 
                placeholder="enter your password"
                placeholderTextColor={THEME.colors.gray}
                secureTextEntry
@@ -42,6 +41,8 @@ const Auth = ({ navigation }) => {
                autoCorrect={false}
                onChangeText={(text) => setPassword(text)}
                value={password}
+               label="Password"
+               labelStyle={styles.label}
             />
     <View style={styles.buttonContainer}>
             <Button title={messageButton} color={THEME.colors.primary} onPress={onHandlerSubmit} />

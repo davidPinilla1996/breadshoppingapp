@@ -1,6 +1,7 @@
 import { View, TextInput, Text } from "react-native";
 import { styles } from "./styles";
 import { THEME } from "../../constants/theme";
+import Label from "../label";
 
 const Input = ({
     editable,
@@ -21,11 +22,12 @@ const Input = ({
 }) => {
     return (
       <View style = {styles.container}>
+      <Label { ...props }>
          <TextInput 
             {...props}
             aditable={editable}
             value={value}
-            style={{ ...style.input, ...style }}
+            style={{ ...styles.input, ...style }}
             onChangeText={onChangeText}
             onFocus={onFocus}
             onBlur={onBlur}
@@ -34,6 +36,7 @@ const Input = ({
             placeholderTextColor={placeholderTextColor}
             keyboardType={KeyboardType}
          />
+      </Label>
          {hasError && touched && (
             <View style={styles.message}>
               <Text style={styles.helpperText}>{error}</Text>
@@ -42,3 +45,5 @@ const Input = ({
       </View>
     );
 };
+
+export default Input;
