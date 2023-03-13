@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
     category: categoryReducer,
     cart: cartReducer,
     orders: ordersReducer,
-    auth: authReducer,
+    auth: authReducer
 }); 
 
 
